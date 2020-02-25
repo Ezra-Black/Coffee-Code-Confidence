@@ -1,27 +1,28 @@
 # Coffee-Code-Confidence
 
-<span class="keyword">import</span> Foundation
-<span class="keyword">import</span> CoreData
+import Foundation
+import CoreData
 
 
-<span class="keyword">class</span> CoreDataStack {
+class CoreDataStack {
     
-    <span class="comment">//can only be one instance of this class ever/Singleton</span>
-    <span class="keyword">static let</span> shared = <span class="type">CoreDataStack</span>()
+    //can only be one instance of this class ever/Singleton
+    static let shared = CoreDataStack()
     
-    <span class="comment">//gets called once</span>
-    <span class="keyword">lazy var</span> container: <span class="type">NSPersistentContainer</span> = {
-        <span class="keyword">let</span> newContainer = <span class="type">NSPersistentContainer</span>(name: <span class="string">"Journal"</span>)
-        newContainer.<span class="call">loadPersistentStores</span> { (<span class="keyword">_</span>, error) <span class="keyword">in
-            guard</span> error == <span class="keyword">nil else</span> {
-                <span class="call">fatalError</span>(<span class="string">"Failed to load persistent stores:</span> \(error!)<span class="string">"</span>)
+    //gets called once
+    lazy var container: NSPersistentContainer = {
+        let newContainer = NSPersistentContainer(name: "Journal")
+        newContainer.loadPersistentStores { (_, error) in
+            guard error == nil else {
+                fatalError("Failed to load persistent stores: \(error!)")
             }
         }
-        <span class="keyword">return</span> newContainer
+        return newContainer
     }()
     
-    <span class="keyword">var</span> mainContext: <span class="type">NSManagedObjectContext</span> {
-        <span class="keyword">return</span> container.<span class="property">viewContext</span>
+    var mainContext: NSManagedObjectContext {
+        return container.viewContext
     }
     
 }
+
