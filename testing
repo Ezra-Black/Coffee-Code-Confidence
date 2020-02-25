@@ -1,0 +1,19 @@
+hello! 
+
+<style>pre { background-color: #1a1a1a; border: 0px solid #ccc; padding: 0px; margin-bottom: 0px; } pre code { display: block; color: #a9bcbc; line-height: 1.4em; font-size: 0.95em; white-space: pre; } pre code .keyword { color: #e73289; } pre code .type { color: #8281ca; } pre code .call { color: #348fe5; } pre code .property { color: #21ab9d; } pre code .number { color: #db6f57; } pre code .string { color: #fa641e; } pre code .comment { color: #6b8a94; } pre code .dotAccess { color: #92b300; } .box { padding: 20px; margin: 0 auto; display: block; border-radius: 8px; background-color: #1a1a1a; border: 0px solid #ccc; } </style>
+<!--Generate code at: https://splash.rambo.codes/ and then COPY HTML-->
+<section class="box"><pre><code><!--Paste the code with the <span> tags after this--><span class="keyword">struct</span> DeviceMeta {
+
+	<span class="comment">///</span> <span class="comment">Version</span> <span class="comment">of</span> <span class="comment">the</span> <span class="comment">application.</span>
+	<span class="keyword">static</span> <span class="keyword">let</span> appVersion = <span class="type">Bundle</span>.<span class="property">main</span>.<span class="call">object</span>(forInfoDictionaryKey: <span class="string">"CFBundleShortVersionString"</span>) <span class="keyword">as</span>? <span class="type">String</span>
+
+	<span class="comment">///</span> <span class="comment">Name</span> <span class="comment">of</span> <span class="comment">the</span> <span class="comment">current</span> <span class="comment">operation</span> <span class="comment">system.</span> <span class="comment">(ios/macos/...)</span>
+	<span class="keyword">static</span> <span class="keyword">let</span> osType = <span class="type">UIDevice</span>.<span class="property">current</span>.<span class="property">systemName</span>
+
+	<span class="comment">///</span> <span class="comment">Version</span> <span class="comment">of</span> <span class="comment">the</span> <span class="comment">operating</span> <span class="comment">system.</span> <span class="comment">(e.g.</span> <span class="comment">11.4)</span>
+	<span class="keyword">static</span> <span class="keyword">let</span> osVersion = <span class="type">UIDevice</span>.<span class="property">current</span>.<span class="property">systemVersion</span>
+
+	<span class="comment">///</span> <span class="comment">Identifier</span> <span class="comment">of</span> <span class="comment">the</span> <span class="comment">device.</span> <span class="comment">(e.g.</span> <span class="comment">iPhone8,2)</span>
+	<span class="keyword">static</span> <span class="keyword">let</span> deviceType = <span class="type">UIDevice</span>.<span class="property">modelIdentifier</span>
+
+}<!--This should be on the same line as the last line of the swift code--></code></pre></section>
