@@ -1,4 +1,4 @@
 # Coffee-Code-Confidence
 
-## Coming Soon
+## Coming Soon -- Summer 2020 --
 
